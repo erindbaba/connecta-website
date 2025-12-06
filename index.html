@@ -124,7 +124,7 @@
                             <img src="https://images.unsplash.com/photo-1556740758-90de249cd698?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                                 alt="Professional team collaborating on business growth metrics and data analytics dashboard" 
                                 class="w-full h-auto object-cover max-h-96"
-                                onerror="this.onerror=null; this.src='https://placehold.co/1200x600/0056B3/ffffff?text=Connecta+Growth+Visualization';"
+                                onerror="this.onerror=null; this.src='https://placehold.co/1200x600/0056B3/ffffff?text=Sales+Customer+Excellence+Focus';"
                             >
                         </div>
                     </div>
@@ -176,7 +176,32 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+                
+                <div class="mt-16 text-center">
+                    <h3 class="text-3xl font-extrabold text-accent mb-4">Focus on Sales: Targeted Results, Not Just Activity</h3>
+                    <p class="text-lg text-gray-600 max-w-4xl mx-auto">
+                        Our sales philosophy centers on maximizing your team's valuable time. We manage the entire top-of-funnel process, ensuring every lead we pass meets strict, **mutually defined qualification criteria**, leading to higher conversion rates and a predictable revenue pipeline.
+                    </p>
+                </div>
+                
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-xl shadow-md border-t-2 border-primary/50">
+                        <i class="fa-solid fa-bullseye text-4xl text-primary mb-3" aria-hidden="true"></i>
+                        <h4 class="text-xl font-bold text-primary">Precision Targeting</h4>
+                        <p class="text-gray-600 text-sm mt-1">Leveraging data-driven intent signals for highly accurate account selection.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-md border-t-2 border-primary/50">
+                        <i class="fa-solid fa-handshake text-4xl text-primary mb-3" aria-hidden="true"></i>
+                        <h4 class="text-xl font-bold text-primary">Multi-Channel Cadences</h4>
+                        <p class="text-gray-600 text-sm mt-1">Integrated approach (email, call, social) to maximize penetration and engagement.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-md border-t-2 border-primary/50">
+                        <i class="fa-solid fa-chart-line text-4xl text-primary mb-3" aria-hidden="true"></i>
+                        <h4 class="text-xl font-bold text-primary">Pipeline Visibility</h4>
+                        <p class="text-gray-600 text-sm mt-1">Seamless integration with your CRM for real-time tracking of lead progress.</p>
+                    </div>
+                </div>
+                </div>
         </section>
 
         <section id="testimonials" class="py-24 sm:py-32 bg-white">
@@ -313,8 +338,8 @@
                             <label for="form-interest" class="block text-sm font-medium text-gray-700">I'm primarily interested in...</label>
                             <select id="form-interest" name="interest" required class="input-focus mt-1 block w-full rounded-lg border-gray-300 shadow-sm border p-4 bg-white">
                                 <option value="" disabled selected>Select an area of focus</option>
-                                <option value="sales">B2B Sales (Appointment Settign)</option>
-                                <option value="support"> Customer Service Support</option>
+                                <option value="sales">B2B Sales Acceleration (Appointments)</option>
+                                <option value="support">Guaranteed Customer Service Support</option>
                                 <option value="both">Exploring Both Solutions</option>
                             </select>
                         </div>
@@ -368,7 +393,7 @@
                 menuButton.setAttribute('aria-expanded', !isExpanded);
                 mobileMenu.classList.toggle('hidden');
                 mobileMenu.classList.toggle('flex');
-                menuButton.focus(); // Keep focus on the button
+                menuButton.focus(); 
             });
             
             // Close mobile menu on link click (for smooth scrolling)
@@ -386,7 +411,6 @@
             const form = document.getElementById('contact-form');
             const modal = document.getElementById('success-modal');
             const modalText = document.getElementById('modal-text');
-            const focusableElementsBeforeModal = document.querySelectorAll('a, button, input, select');
 
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
