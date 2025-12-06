@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecta - B2B Sales Acceleration & Customer Excellence</title>
+    <meta name="description" content="Connecta delivers outsourced B2B sales pipeline fill and customer service excellence with guaranteed quality and transparency.">
+    <meta name="author" content="Connecta LLC">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Professional Color Palette & Global Styles */
+        :root {
+            --color-primary: #0056B3; /* Deep Professional Blue */
+            --color-accent: #FF7A00; /* Vibrant Orange/Trust */
+            --color-text: #1E293B; /* Slate 800 */
+            --color-bg: #F8FAFC; /* Light Gray Background */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-primary);
+        }
+        /* Custom Utility Classes */
+        .text-primary { color: var(--color-primary); }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-accent { color: var(--color-accent); }
+        .bg-accent { background-color: var(--color-accent); }
+        
+        /* Custom Shadow & Lift Effect for cards and buttons (Enhanced for A11Y) */
+        .shadow-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        /* Applied to :hover, :focus, and :focus-visible for accessibility */
+        .shadow-lift:hover, .shadow-lift:focus, .shadow-lift:focus-visible {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 86, 179, 0.1); 
+            outline: none; /* Removed default browser focus ring */
+        }
+        .cta-button {
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .cta-button:hover {
+            background-color: #e06c00; /* Darker accent */
+            transform: scale(1.02);
+        }
+        .input-focus:focus {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.4); /* Stronger shadow */
+            outline: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex-shrink-0 text-3xl font-extrabold tracking-tight text-primary">
+                    Connecta<span class="text-accent">.</span>
+                </a>
+
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#services" class="text-gray-600 hover:text-primary font-medium transition duration-150 focus:outline-none focus:ring-2 focus:ring-accent rounded-md px-1">Services</a>
+                    <a href="#quality" class="text-gray-600 hover:text-primary font-medium transition duration-150 focus:outline-none focus:ring-2 focus:ring-accent rounded-md px-1">Guarantee</a>
+                    <a href="#differentiators" class="text-gray-600 hover:text-primary font-medium transition duration-150 focus:outline-none focus:ring-2 focus:ring-accent rounded-md px-1">Why Us</a>
+                    <a href="#contact" class="px-6 py-2 rounded-full bg-accent text-white font-semibold cta-button shadow-md focus:outline-none focus:ring-4 focus:ring-accent/50">
+                        Start Conversation
+                    </a>
+                </nav>
+
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100" role="menu" aria-orientation="vertical">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-accent">Services</a>
+                <a href="#quality" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-accent">Guarantee</a>
+                <a href="#differentiators" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-accent">Why Us</a>
+                <a href="#contact" class="block w-full text-center px-3 py-2 mt-2 rounded-full text-base font-bold bg-accent text-white hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-accent/50">Start Conversation</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="pt-16 pb-24 sm:pt-24 sm:pb-32 bg-white overflow-hidden border-b-8 border-accent/70">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                    <div class="lg:col-span-6 order-2 lg:order-1">
+                        <span class="inline-flex items-center px-4 py-1 text-sm font-semibold rounded-full bg-blue-50 text-primary border border-primary/20 mb-4 shadow-sm">
+                            Results. Quality. Transparency.
+                        </span>
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight text-primary">
+                            Accelerate Growth with Guaranteed Quality.
+                        </h1>
+                        <p class="mt-6 text-xl text-gray-600 max-w-xl">
+                            Connecta delivers outsourced B2B sales pipeline fill and customer service excellence. We ensure every interaction is managed by expertly trained and continuously coached professionals.
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                            <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-accent text-white font-bold text-lg shadow-xl hover:bg-yellow-600 cta-button focus:outline-none focus:ring-4 focus:ring-accent/50">
+                                Book a Strategy Session
+                            </a>
+                            <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-primary font-bold text-lg border-2 border-primary hover:bg-blue-50 transition duration-300 focus:outline-none focus:ring-4 focus:ring-primary/50">
+                                Explore Services
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 mt-12 lg:mt-0 order-1 lg:order-2">
+                        <div class="rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1556740758-90de249cd698?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                alt="Professional team collaborating on business growth metrics and data analytics dashboard" 
+                                class="w-full h-auto object-cover max-h-96"
+                                onerror="this.onerror=null; this.src='https://placehold.co/1200x600/0056B3/ffffff?text=Connecta+Growth+Visualization';"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 sm:py-32 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base font-semibold uppercase text-accent">Comprehensive Outsourced Solutions</h2>
+                    <p class="mt-2 text-4xl font-extrabold text-primary sm:text-5xl tracking-tight">
+                        Our Dual Pillars of Business Value
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="p-8 bg-white rounded-2xl shadow-xl border-t-8 border-primary shadow-lift" tabindex="0">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-rocket text-5xl text-accent mr-5 mt-1 p-3 bg-blue-50 rounded-lg" aria-hidden="true"></i>
+                            <div>
+                                <h3 class="text-3xl font-bold mb-3">B2B Sales Pipeline Acceleration</h3>
+                                <p class="text-gray-600">
+                                    Stop chasing cold leads. We specialize in targeted outreach to decision-makers, securing qualified meetings that directly convert to revenue for B2B tech and service industries.
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="mt-6 space-y-3 text-gray-700 pl-4 border-l-4 border-primary/50 pt-2 ml-4" role="list">
+                            <li class="flex items-center"><i class="fa-solid fa-arrow-up-right-dots text-accent mr-3" aria-hidden="true"></i> Intent-Driven Prospecting & Validation.</li>
+                            <li class="flex items-center"><i class="fa-solid fa-calendar-check text-accent mr-3" aria-hidden="true"></i> Guaranteed Pre-Qualified Appointments (BANT).</li>
+                            <li class="flex items-center"><i class="fa-solid fa-magnifying-glass text-accent mr-3" aria-hidden="true"></i> Transparent Real-Time Reporting & Lead Hand-off.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-8 bg-white rounded-2xl shadow-xl border-t-8 border-accent shadow-lift" tabindex="0">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-hands-holding text-5xl text-primary mr-5 mt-1 p-3 bg-yellow-50 rounded-lg" aria-hidden="true"></i>
+                            <div>
+                                <h3 class="text-3xl font-bold mb-3 text-accent">Guaranteed Quality Customer Service</h3>
+                                <p class="text-gray-600">
+                                    Your brand's reputation is protected. We provide empathetic, knowledgeable support across all channels, driving high retention and customer satisfaction (CSAT) scores.
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="mt-6 space-y-3 text-gray-700 pl-4 border-l-4 border-accent/50 pt-2 ml-4" role="list">
+                            <li class="flex items-center"><i class="fa-solid fa-headset text-primary mr-3" aria-hidden="true"></i> Professionally Trained and Dedicated Teams.</li>
+                            <li class="flex items-center"><i class="fa-solid fa-comments text-primary mr-3" aria-hidden="true"></i> Omni-Channel Coverage (Phone, Live Chat, Email).</li>
+                            <li class="flex items-center"><i class="fa-solid fa-star text-primary mr-3" aria-hidden="true"></i> Rigorous Quality Assurance and FCR Focus.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-24 sm:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-base font-semibold uppercase text-accent text-center">Trusted Partnerships</h2>
+                <p class="mt-2 text-4xl font-extrabold text-primary sm:text-5xl tracking-tight text-center mb-16">
+                    What Our Partners Say
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-inner border border-gray-200" role="blockquote" aria-label="Testimonial from Sarah J.">
+                        <i class="fa-solid fa-quote-left text-accent text-3xl mb-4 opacity-70" aria-hidden="true"></i>
+                        <p class="text-lg italic text-gray-700">"Connecta secured more qualified appointments in 30 days than our internal team did all quarter. Their professionalism and pipeline clarity are unmatched."</p>
+                        <div class="mt-6 border-t pt-4">
+                            <p class="font-bold text-primary">Sarah J.</p>
+                            <p class="text-sm text-gray-500">VP of Sales, Tech Solutions Co.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-inner border border-gray-200" role="blockquote" aria-label="Testimonial from Michael T.">
+                        <i class="fa-solid fa-quote-left text-accent text-3xl mb-4 opacity-70" aria-hidden="true"></i>
+                        <p class="text-lg italic text-gray-700">"The quality of their customer service team exceeded our expectations. Our CSAT score jumped 15 points within the first two months of partnership."</p>
+                        <div class="mt-6 border-t pt-4">
+                            <p class="font-bold text-primary">Michael T.</p>
+                            <p class="text-sm text-gray-500">Director of Operations, E-Commerce Platform</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-inner border border-gray-200" role="blockquote" aria-label="Testimonial from Elena V.">
+                        <i class="fa-solid fa-quote-left text-accent text-3xl mb-4 opacity-70" aria-hidden="true"></i>
+                        <p class="text-lg italic text-gray-700">"The continuous coaching is evident. Connecta's agents sound like they work directly for us—knowledgeable, consistent, and highly professional."</p>
+                        <div class="mt-6 border-t pt-4">
+                            <p class="font-bold text-primary">Elena V.</p>
+                            <p class="text-sm text-gray-500">COO, Financial Services Firm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quality" class="py-24 bg-primary text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base font-semibold uppercase text-accent">Setting the Benchmark</h2>
+                    <p class="mt-2 text-4xl font-extrabold sm:text-5xl tracking-tight text-white">
+                        The Connecta Performance Commitment
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="text-center p-8 rounded-2xl bg-primary/90 shadow-2xl border-b-4 border-accent">
+                        <i class="fa-solid fa-book-open-reader text-6xl text-accent mb-4" aria-hidden="true"></i>
+                        <div class="text-5xl font-extrabold text-white">Coaching</div>
+                        <h3 class="mt-3 text-2xl font-semibold text-gray-200">Continuous Professional Development</h3>
+                        <p class="mt-2 text-sm text-gray-400">Our staff are not just hired; they are expertly coached on your domain, brand voice, and soft skills weekly.</p>
+                    </div>
+                    
+                    <div class="text-center p-8 rounded-2xl bg-primary/90 shadow-2xl border-b-4 border-accent">
+                        <i class="fa-solid fa-shield-virus text-6xl text-accent mb-4" aria-hidden="true"></i>
+                        <div class="text-5xl font-extrabold text-white">2X Daily</div>
+                        <h3 class="mt-3 text-2xl font-semibold text-gray-200">Quality Assurance Reviews</h3>
+                        <p class="mt-2 text-sm text-gray-400">Strict monitoring of all interactions ensures absolute compliance and perfect pitch, 7 days a week.</p>
+                    </div>
+                    
+                    <div class="text-center p-8 rounded-2xl bg-primary/90 shadow-2xl border-b-4 border-accent">
+                        <i class="fa-solid fa-piggy-bank text-6xl text-accent mb-4" aria-hidden="true"></i>
+                        <div class="text-5xl font-extrabold text-white">Aligned</div>
+                        <h3 class="mt-3 text-2xl font-semibold text-gray-200">Performance Pricing Model</h3>
+                        <p class="mt-2 text-sm text-gray-400">We take on the risk. Our compensation is directly tied to the achievement of your specific, qualified outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="differentiators" class="py-24 sm:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-3 lg:gap-16 items-center">
+                    <div class="lg:col-span-1 mb-10 lg:mb-0">
+                        <h2 class="text-base font-semibold uppercase text-accent">Core Differentiators</h2>
+                        <p class="mt-2 text-4xl font-extrabold text-primary sm:text-5xl tracking-tight">
+                            The Connecta Advantage
+                        </p>
+                        <p class="mt-6 text-lg text-gray-600">
+                            We bridge the gap between outsourcing cost efficiency and in-house quality control through unique operational standards.
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-2 space-y-8">
+                        <div class="flex p-6 rounded-xl bg-white shadow-lift border-l-4 border-primary" tabindex="0">
+                            <i class="fa-solid fa-head-side-mask text-4xl text-primary flex-shrink-0 mr-6" aria-hidden="true"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary">Brand Persona Consistency</h3>
+                                <p class="mt-1 text-gray-600">Our training models ensure agents adopt your specific brand voice, solving the common 'outsourced feel' problem. We act as a seamless extension of your team.</p>
+                            </div>
+                        </div>
+                        <div class="flex p-6 rounded-xl bg-white shadow-lift border-l-4 border-primary" tabindex="0">
+                            <i class="fa-solid fa-sitemap text-4xl text-primary flex-shrink-0 mr-6" aria-hidden="true"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary">Full Data Transparency</h3>
+                                <p class="mt-1 text-gray-600">Gain real-time access to all call data, recordings, and performance dashboards. You see what we see, enabling collaborative optimization.</p>
+                            </div>
+                        </div>
+                        <div class="flex p-6 rounded-xl bg-white shadow-lift border-l-4 border-primary" tabindex="0">
+                            <i class="fa-solid fa-scale-balanced text-4xl text-primary flex-shrink-0 mr-6" aria-hidden="true"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary">Compliance First Methodology</h3>
+                                <p class="mt-1 text-gray-600">Proactive measures and continuous training keep us ahead of global compliance standards, mitigating risk for your organization.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-gray-900">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-2xl border-t-8 border-accent">
+                    <div class="text-center mb-10">
+                        <h2 class="text-4xl font-extrabold text-primary mb-2">Ready for a Strategic Partnership?</h2>
+                        <p class="text-xl text-gray-600">
+                            Book your complimentary strategy session to define your custom growth plan.
+                        </p>
+                    </div>
+                    
+                    <form id="contact-form" class="space-y-6" action="#" method="POST">
+                        
+                        <div>
+                            <label for="form-name" class="block text-sm font-medium text-gray-700">Your Full Name</label>
+                            <input type="text" id="form-name" name="name" required class="input-focus mt-1 block w-full rounded-lg border-gray-300 shadow-sm border p-4">
+                        </div>
+                        <div>
+                            <label for="form-email" class="block text-sm font-medium text-gray-700">Work Email</label>
+                            <input type="email" id="form-email" name="email" required class="input-focus mt-1 block w-full rounded-lg border-gray-300 shadow-sm border p-4">
+                        </div>
+                        <div>
+                            <label for="form-interest" class="block text-sm font-medium text-gray-700">I'm primarily interested in...</label>
+                            <select id="form-interest" name="interest" required class="input-focus mt-1 block w-full rounded-lg border-gray-300 shadow-sm border p-4 bg-white">
+                                <option value="" disabled selected>Select an area of focus</option>
+                                <option value="sales">B2B Sales (Appointment Settign)</option>
+                                <option value="support"> Customer Service Support</option>
+                                <option value="both">Exploring Both Solutions</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-full shadow-lg text-lg font-bold text-white bg-accent cta-button focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-accent/50">
+                            <i class="fa-solid fa-paper-plane mr-3" aria-hidden="true"></i> Send Inquiry
+                        </button>
+
+                        <div id="success-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4 z-[100]" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                            <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md text-center">
+                                <i class="fa-solid fa-circle-check text-green-500 text-6xl mb-4" aria-hidden="true"></i>
+                                <h3 id="modal-title" class="text-3xl font-bold text-primary mb-3">Strategy Session Requested!</h3>
+                                <p class="text-gray-600 text-lg" id="modal-text"></p>
+                                <button onclick="document.getElementById('success-modal').classList.add('hidden')" class="mt-6 px-8 py-3 rounded-full bg-primary text-white hover:bg-blue-700 font-semibold shadow-md focus:outline-none focus:ring-4 focus:ring-primary/50">
+                                    Got It
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white" role="contentinfo">
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <div class="flex justify-center space-x-6 text-sm mb-4">
+                <a href="#services" class="text-gray-400 hover:text-white transition duration-150">Services</a>
+                <a href="#quality" class="text-gray-400 hover:text-white transition duration-150">Guarantee</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-150">Privacy Policy</a>
+            </div>
+            <p class="text-center text-3xl font-extrabold tracking-tight text-white mb-6">
+                Connecta<span class="text-accent">.</span>
+            </p>
+            <p class="text-center text-base text-gray-400">
+                &copy; <span id="current-year"></span> Connecta LLC. Connecting Value. Accelerating Growth.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile Menu Toggle Logic
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+                menuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                menuButton.focus(); // Keep focus on the button
+            });
+            
+            // Close mobile menu on link click (for smooth scrolling)
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+
+            // Form Submission Logic (MOCK with Custom Modal for display)
+            const form = document.getElementById('contact-form');
+            const modal = document.getElementById('success-modal');
+            const modalText = document.getElementById('modal-text');
+            const focusableElementsBeforeModal = document.querySelectorAll('a, button, input, select');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const name = formData.get('name');
+                const interest = formData.get('interest');
+                let interestText = '';
+                
+                if (interest === 'sales') interestText = 'B2B Sales Acceleration';
+                else if (interest === 'support') interestText = 'Guaranteed Customer Service Support';
+                else if (interest === 'both') interestText = 'Both Solutions';
+
+                // Simulate loading/API call
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalText = submitButton.innerHTML;
+                submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-3" aria-hidden="true"></i> Sending Request...';
+                submitButton.disabled = true;
+
+                setTimeout(() => {
+                    // Restore button state
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                    form.reset();
+
+                    // Display custom success modal
+                    modalText.innerHTML = `Thank you, <strong>${name}</strong>! We have noted your primary interest in <strong>${interestText}</strong>. A Connecta strategist will contact you within the next 4 hours.`;
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    
+                    // A11Y: Trap focus inside the modal and focus the first element
+                    const modalButton = modal.querySelector('button');
+                    modalButton.focus();
+
+                }, 2000); // 2 second delay simulation
+            });
+        });
+    </script>
+</body>
+</html>
